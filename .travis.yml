@@ -10,7 +10,7 @@ before_script:
 - sh -e /etc/init.d/xvfb start
 script: export DISPLAY=:99.0; lein deps; lein uberjar
 after_success:
-- travis-custom-deploy sftp /home/travis/build/elrippoblue/mincer/target/
+- travis-custom-deploy sftp target/
 env:
   global:
   - secure: lCOjP4NA15ZecdOFsu93uO9gusYkHC26jr8qR/WDHlOzVkKS79rbiOBkS9/A9y+3ra7Hk4s5l9rqUqeCS2yC1cwmd9XMAO2ZxoEGOdbh4X4zXLPeAfaAAtjmhHLlnVaDhYMO7bgVOkiMxPCRY+EKY2R4R8GnzNTFaBpepQ0Lo5cIWQ1rUBo9xfCQQn8ijdCqSh0wxAQEwo/XQj2BSObYlVGogldj3fg/8/NjYBPAmCxM28B98iSI82vkmvir7ILGQSDZj8S/k+G/p+gHUswIXW6lgjxKVpDtZKPfAW8MGo3OuDX1Ej2ZfVntvEFJXnzo0GJfikEdqQLpAL3ZSiC2KKajlsPJUhB0mXpT5pmAiXnmgS2mnu3P8S0lq5fcJvi43GnbxNPkkY4krZ3XrfBfhvJh60RpViyBNFO2grWhbov3SdIBjTCaVuEEVoEYSZVk4hfUMFG68/4Z4Iq6p47fp3QXvU23qSU3X44/kkaL2RF1VgZvKHbUQDmpjHsZRBQ9ug+2htafnoLbu2YCVE9WcMpwDvpE/N6E1CB5rmjVtNwiN92JZ1TEBvHkVrdwtW+LgwHpgDgotiQf+mzuIMseOGPCJ5nj4UaJmD3Ipcvvbx4xnqga0yULlckkZDnPB4rucQKA8fYuivKZhncSC7wm+ysuwcahPz92OvamSTaUMJ8=
