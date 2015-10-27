@@ -10,7 +10,7 @@ before_script:
 - sh -e /etc/init.d/xvfb start
 script: export DISPLAY=:99.0; lein deps; lein uberjar
 after_success:
-- travis-custom-deploy sftp target/
+- travis-custom-deploy sftp target/mincer-0.1.0-SNAPSHOT-standalone.jar
 env:
   global:
   - secure: Mw9A8eA1lgFaXcOEYQoRmAkZffPb9m6cByQ9ulgYatVxoVweutbIa2OrYgygfnCb4xUDE0yebSihnH/hAA3Oumn4FR58mLg6DEPdOlPJyQpUr6S9807x45YvCc1m3AEh2LCDap6jZcppsQbPLrnhBDfCiSLBB/2b/ts9SDot9JziJMgJVXgCaXKog661AmC409jbQaNM5HIjyYJYCvDhISZOLB4nZHQviBGoad8uxKxN6x7P8/Sy2pdwUGgjY2oRYOLNXIc4OVwy9HwvTm8ryruaYVng8eWfPhbhxHA+XBbq3jiUN3SOA/gZirCkk+ObtJ9Wy27jNAJQO7EdTAKE8UPr+HQRBO64j46d+JJZT1ai6vCxgwxZMi/tEJDMCxSM1NrK8uivZY83YO+tXfafO9os5eaPjMaKP9jbLdvCPoxjZWbilDlWiyqO+UkwM/m9fCIqhsp01dk1HziUAxvfsxoxw59jilODKxc0q8URhfaYvnQMOMy451DhHpnPFkTg2qdF8ysWxqzmBnuzhpmVJRyAwIxHTE/QeTvibnYofZrvmrdPf73xlwqFfpINZxLABWM+NUhlWk3kIfEBYoPhaI1Ogd5L6Mvgsmq9lOspLvc171fGBVJVOi9Q78Ng+qNMhIfecSqiHdbWLr53cyBgxdO8WKHDYZlfrxBvNPb7A5I=
