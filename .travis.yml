@@ -1,0 +1,11 @@
+language: clojure
+lein: lein
+before_install:
+  - rvm install 2.0.0
+  - gem install travis-custom-deploy
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+script: "export DISPLAY=:99.0; lein deps; lein uberjar"
+after_success:
+  - travis-custom-deploy sftp /home/travis/build/elrippoblue/mincer/target/
